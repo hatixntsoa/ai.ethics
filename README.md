@@ -2,6 +2,8 @@
 
 **Cyber risk management applied to the EU AI Act: the *SmartAdvisor AI* case.**
 
+Live website link: [ethics.hatixntsoa.me](https://ethics.hatixntsoa.me)
+
 > **Academic context.** This repository gathers two school assignments completed during **M1 OCC 2026**, in the **AI Ethics** course. The first is a chapter-by-chapter **summary of the EU AI Act**. The second, the exercise "TD AI Act I-II-III", asked for a 2 to 3 page analysis of the SmartAdvisor AI case across Chapters I, II and III of the AI Act. I extended the second into a full cyber risk management case study: a risk register, a compliance matrix, technical specifications and a roadmap, updated to the regulatory position as of November 2026.
 
 The repository starts with a summary of the AI Act, then follows a three-assignment case study that takes a multi-modal AI product (conversational agent, image analysis, document analysis, recommendation engine) through **scoping, risk classification and high-risk compliance** under Regulation (EU) 2024/1689 (the *AI Act*).
