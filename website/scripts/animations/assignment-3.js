@@ -1,0 +1,13 @@
+import { DOCS } from '../data/docs.js';
+import { section, pager, finishDoc } from '../docReader.js';
+import { complianceExplorer } from '../complianceExplorer.js';
+import { renderGantt, renderRaci } from '../gantt.js';
+const slots = { matrix: complianceExplorer, gantt: renderGantt, raci: (h, b) => renderRaci(h, b) };
+const doc = document.getElementById('doc');
+section(doc, 'h-brief', 'Brief', DOCS.a3.problem);
+section(doc, 'h-solution', 'Solution', DOCS.a3.solution);
+section(doc, 'artifacts', 'Artifacts', []);
+section(doc, 'h-compliance', 'Compliance matrix', DOCS.a3.compliance, slots);
+section(doc, 'h-tech', 'Technical specifications', DOCS.a3.tech, slots);
+section(doc, 'h-roadmap', 'Implementation roadmap and RACI', DOCS.a3.roadmap, slots);
+pager(doc, 'assignment-3'); finishDoc();

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 2: Risk classification | AI Ethics</title>
+  <meta name="description" content="Classification decision tree and risk register explorer: 22 risks for SmartAdvisor AI, inherent and residual heat maps.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/pages.css">
+  <link rel="stylesheet" href="../styles/motion.css">
+  <link rel="stylesheet" href="../styles/print.css" media="print">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="site-header" id="site-header"></header>
+  <main id="main"><div class="container doc-layout"><aside class="toc" id="toc"></aside><div class="doc-main">
+    <h1>Assignment 2: Risk classification</h1>
+    <section aria-labelledby="h-tree">
+      <h2 id="h-tree">Classification decision tree</h2>
+      <p>Pick a module and use case, then answer each question. The tier and its legal anchor appear at the end.</p>
+      <div id="decision-tree"></div>
+    </section>
+    <section aria-labelledby="h-register">
+      <h2 id="h-register">Risk register explorer</h2>
+      <div class="grid kpis">
+        <p class="card"><span class="kpi" id="c-crit-in">0</span> critical before treatment</p>
+        <p class="card"><span class="kpi" id="c-high-in">0</span> high before treatment</p>
+        <p class="card"><span class="kpi" id="c-crit-out">0</span> critical after treatment</p>
+        <p class="card"><span class="kpi" id="c-high-out">0</span> high after treatment</p>
+      </div>
+      <div class="grid maps">
+        <figure><figcaption>Inherent risk (likelihood up, impact right)</figcaption><div id="heat-inherent"></div></figure>
+        <figure><figcaption>Residual risk (likelihood up, impact right)</figcaption><div id="heat-residual"></div></figure>
+      </div>
+      <div class="filters" role="group" aria-label="Risk filters">
+        <label>Rated on <select id="f-view"><option value="inherent">Inherent</option><option value="residual">Residual</option></select></label>
+        <label>Band <select id="f-band"></select></label>
+        <label>Category <select id="f-cat"></select></label>
+        <label>Module <select id="f-mod"></select></label>
+        <label>Owner <select id="f-owner"></select></label>
+      </div>
+      <p id="rr-count" role="status" aria-live="polite"></p>
+      <div class="table-wrap">
+        <table>
+          <caption class="visually-hidden">SmartAdvisor AI risk register</caption>
+          <thead><tr>
+            <th scope="col" aria-sort="ascending"><button class="btn" data-sort="id" type="button">ID</button></th>
+            <th scope="col">Risk</th><th scope="col">Module</th><th scope="col">Cat.</th>
+            <th scope="col"><button class="btn" data-sort="inherent" type="button">Inherent</button> → <button class="btn" data-sort="residual" type="button">Residual</button></th>
+            <th scope="col">Owner</th><th scope="col"><span class="visually-hidden">Details</span></th>
+          </tr></thead>
+          <tbody id="rr-body"></tbody>
+        </table>
+      </div>
+    </section>
+    <div id="doc"></div>
+  </div></div></main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script type="module" src="../scripts/main.js"></script>
+  <script type="module" src="../scripts/animations/assignment-2.js"></script>
+</body>
+</html>

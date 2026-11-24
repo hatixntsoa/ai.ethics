@@ -1,0 +1,24 @@
+@keyframes drift{to{transform:translate3d(6%,4%,0) scale(1.08)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+@keyframes flow{to{stroke-dashoffset:-12}}
+main{animation:fadeUp var(--dur-slow) var(--ease-out) both}
+.reveal{opacity:0;transform:translateY(12px);
+  transition:opacity var(--dur-slow) var(--ease-out),transform var(--dur-slow) var(--ease-out);
+  transition-delay:calc(var(--i,0) * var(--stagger-step))}
+.reveal.is-in{opacity:1;transform:none}
+.tab-hidden .hero::before,.tab-hidden .hero-ring{animation-play-state:paused}
+:root[data-motion="reduce"] *,:root[data-motion="reduce"] *::before,:root[data-motion="reduce"] *::after{
+  animation:none!important;transition:none!important;scroll-behavior:auto!important}
+:root[data-motion="reduce"] .reveal{opacity:1;transform:none}
+:root[data-motion="reduce"] main{opacity:1;transform:none}
+:root[data-motion="reduce"] .diagram .node,:root[data-motion="reduce"] .diagram .boundary,:root[data-motion="reduce"] .diagram .boundary-label{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .diagram .node,.diagram .boundary,.diagram .boundary-label{opacity:1;transform:none}
+}
+
+:root[data-motion="reduce"] .gantt .g-bar rect,:root[data-motion="reduce"] .pyr{transform:none;opacity:1}

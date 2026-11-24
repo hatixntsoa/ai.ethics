@@ -1,0 +1,10 @@
+import { DOCS } from '../data/docs.js';
+import { initDecisionTree } from '../decisionTree.js';
+import { section, pager, finishDoc } from '../docReader.js';
+initDecisionTree(document.getElementById('decision-tree'));
+const doc = document.getElementById('doc');
+section(doc, 'h-brief', 'Brief', DOCS.a2.problem);
+section(doc, 'h-solution', 'Solution', DOCS.a2.solution);
+section(doc, 'h-register-notes', 'Risk register: notes, executive decisions and KRIs', DOCS.a2.register);
+pager(doc, 'assignment-2');
+import('../riskRegister.js').then(finishDoc);

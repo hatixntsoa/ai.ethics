@@ -1,0 +1,10 @@
+@media print{
+  .site-header,.progress,.search,.skip-link,.btn,.toc,.filters{display:none!important}
+  body{background:#fff;color:#000;font-size:11pt}
+  .card,.banner{box-shadow:none;break-inside:avoid}
+  .reveal{opacity:1!important;transform:none!important}
+  .acc-panel{grid-template-rows:1fr!important}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:.8em}
+  .site-footer{background:none;color:#000}
+  .site-footer .legal{color:#000}
+}

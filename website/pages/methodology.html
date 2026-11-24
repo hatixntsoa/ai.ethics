@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology | AI Ethics</title>
+  <meta name="description" content="Risk method, scales, appetite and the AI Act, ISO/IEC 42001, ISO/IEC 27001 and NIST AI RMF crosswalk.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/pages.css">
+  <link rel="stylesheet" href="../styles/motion.css">
+  <link rel="stylesheet" href="../styles/print.css" media="print">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="site-header" id="site-header"></header>
+  <main id="main"><div class="container">
+    <h1>Risk methodology and framework crosswalk</h1>
+    <section aria-labelledby="h-lens"><h2 id="h-lens">Two lenses, both required</h2><div class="table-wrap" id="t-lens"></div></section>
+    <section aria-labelledby="h-proc">
+      <h2 id="h-proc">Process: Frame, Assess, Respond, Monitor</h2>
+      <p><button class="btn" id="loop-toggle" type="button" aria-pressed="false">Play loop</button></p>
+      <ol class="loop" id="loop"></ol>
+      <div class="table-wrap" id="t-proc"></div>
+    </section>
+    <section aria-labelledby="h-scales">
+      <h2 id="h-scales">Scales and rating bands</h2>
+      <div class="table-wrap" id="t-like"></div>
+      <div class="table-wrap" id="t-impact"></div>
+      <div class="table-wrap" id="t-bands"></div>
+    </section>
+    <section aria-labelledby="h-app"><h2 id="h-app">Risk appetite (assumed for the case)</h2><ul id="appetite"></ul></section>
+    <section aria-labelledby="h-cross">
+      <h2 id="h-cross">Crosswalk</h2>
+      <p><label>Filter <input type="search" id="cw-filter" placeholder="e.g. Art. 14, 8.15, GOVERN"></label></p>
+      <p id="cw-count" role="status" aria-live="polite"></p>
+      <div class="table-wrap" id="t-cross"></div>
+    </section>
+  </div></main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script type="module" src="../scripts/main.js"></script>
+  <script type="module" src="../scripts/methodology.js"></script>
+</body>
+</html>

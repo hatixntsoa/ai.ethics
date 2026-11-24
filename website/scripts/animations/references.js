@@ -1,0 +1,10 @@
+import { DOCS } from '../data/docs.js';
+import { section, finishDoc } from '../docReader.js';
+import { el } from '../dom.js';
+const doc = document.getElementById('doc');
+section(doc, 'h-refs', 'References', DOCS.refs);
+const about = section(doc, 'h-about', 'About', []);
+about.append(el('p', '', 'Author: Hatix Ntsoa. M1 OCC 2026, AI Ethics course.'));
+about.append(Object.assign(el('a', '', 'Source repository: github.com/hatixntsoa/ai.ethics'), { href: 'https://github.com/hatixntsoa/ai.ethics', rel: 'noopener' }));
+section(doc, 'h-licence', 'Licence', DOCS.license);
+finishDoc();
